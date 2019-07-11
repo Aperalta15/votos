@@ -1,0 +1,24 @@
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Celular</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @personas.each do |persona|%>
+        <tr>
+          <th scope="row"><%=persona.id%></th>
+          <td><%=link_to persona.cedula, persona_path(persona)%></td>
+          <td><%=persona.nombre%></td>
+          <td><%=persona.apellido%></td>
+          <td><%=persona.direccion%></td>
+          <td><%=persona.celular%></td>
+        </tr>
+    <%end%>
+  </tbody>
+</table>
