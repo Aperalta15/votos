@@ -1506,3 +1506,36 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 120ms (Views: 114.1ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (55.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (41.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to CreatePersonas (20190711132355)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1344.3ms)[0m  [1m[35mCREATE TABLE "personas" ("id" bigserial primary key, "cedula" integer, "nombre" character varying, "apellido" character varying, "celular" character varying, "direccion" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_ff69b46a04"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20190711132355_create_personas.rb:3
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE  INDEX  "index_personas_on_user_id" ON "personas"  ("user_id")[0m
+  ↳ db/migrate/20190711132355_create_personas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190711132355"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (30.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPersona Create (763.2ms)[0m  [1m[32mINSERT INTO "personas" ("cedula", "nombre", "apellido", "celular", "direccion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["cedula", 1001821114], ["nombre", "Antonio jose"], ["apellido", "Peralta Bonadiez"], ["celular", "3016332203"], ["direccion", "cra 6N #101-25"], ["user_id", 1], ["created_at", "2019-07-11 13:42:45.079467"], ["updated_at", "2019-07-11 13:42:45.079467"]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
