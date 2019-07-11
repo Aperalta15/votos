@@ -35,10 +35,9 @@
             <%= render 'layouts/topnavbar' %>
 
             <!-- Main view  -->
+            <%= yield %>
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
-            <%= yield %>
-
             <!-- Footer -->
             <%= render 'layouts/footer' %>
 
