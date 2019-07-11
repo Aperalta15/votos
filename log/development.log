@@ -1,0 +1,112 @@
+  [1m[35m (106.4ms)[0m  [1m[35mCREATE DATABASE "votos_development" ENCODING = 'utf8'[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "votos_test" ENCODING = 'utf8'[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (39.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to DeviseCreateUsers (20190711051223)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (121.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190711051223_devise_create_users.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (2792.0ms)[0m  [1m[35mCREATE DATABASE "votos_development" ENCODING = 'utf8'[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (595.1ms)[0m  [1m[35mCREATE DATABASE "votos_test" ENCODING = 'utf8'[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (385.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to DeviseCreateUsers (20190711051223)
+  [1m[35m (36.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (97.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190711051223_devise_create_users.rb:5
+  [1m[35m (52.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190711051223_devise_create_users.rb:39
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190711051223_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (99.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190711051223"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Create (12.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-11 05:29:41.976971"], ["updated_at", "2019-07-11 05:29:41.976971"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(316204418763176370)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-07-11 00:30:57 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 10830ms (Views: 10819.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/minor" for ::1 at 2019-07-11 00:32:11 -0500
+Processing by HomeController#minor as HTML
+  Rendering home/minor.html.erb within layouts/application
+  Rendered home/minor.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 121.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-11 00:32:13 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-11 00:32:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (471.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 802ms (Views: 762.6ms | ActiveRecord: 8.7ms)
+
+
