@@ -19,5 +19,14 @@ module Inspinia
     config.assets.precompile += [ 'appviews.css', 'cssanimations.css', 'dashboards.css', 'forms.css', 'gallery.css', 'graphs.css', 'mailbox.css', 'miscellaneous.css', 'pages.css', 'tables.css', 'uielements.css', 'widgets.css', 'commerce.css' ]
     config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', 'commerce.js', 'metrics.js', 'landing.js' ]
 
+    config.to_prepare do
+      Devise::SessionsController.layout "empty"
+      Devise::PasswordsController.layout "empty"
+      Devise::PasswordsController.layout "empty"
+      Devise::ConfirmationsController.layout "empty"
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "empty" }
+      # Or to configure mailer layout
+      # Devise::Mailer.layout "email" # email.haml or email.erb
+    end
   end
 end

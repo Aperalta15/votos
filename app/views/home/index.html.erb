@@ -1,14 +1,315 @@
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="">JUAN MANOTAS</a>
+            <div class="navbar-header page-scroll">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><%= link_to "Inicio", root_path,class: "nav-link page-scroll"%></li>
+                    <li><a class="nav-link page-scroll" href="#features">Features</a></li>
+                    <li><a class="nav-link page-scroll" href="#team">Prensa</a></li>
+                    <li><a class="nav-link page-scroll" href="#comments">Comentarios</a></li>
+                    <li><a class="nav-link page-scroll" href="#contact">Contactame</a></li>
+                    <li><%= link_to "Seguidores", persona_index_path,class: "nav-link page-scroll"%></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- carousel -->
+<div id="inSlider" class="carousel slide" data-ride="carousel" >
+<ol class="carousel-indicators">
+    <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+    <li data-target="#inSlider" data-slide-to="1"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="carousel-caption">
+                <h2>El Atlántico Avanza Juancho Manotas</h2>
+            </div>
+            <div class="carousel-image wow zoomIn">
+                <img src="" alt="land_1">
+            </div>
+        </div>
+        <!-- Set background for slide in css -->
+        <div class="header-back one"></div>
+
+    </div>
+    <div class="carousel-item">
+        <div class="container">
+            <div class="carousel-caption blank">
+                <h2>El Atlántico Avanza Juancho Manotas</h2>
+            </div>
+        </div>
+        <!-- Set background for slide in css -->
+        <div class="header-back two"></div>
+    </div>
+</div>
+<a class="carousel-control-prev" href="#inSlider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+</a>
+<a class="carousel-control-next" href="#inSlider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+</a>
+</div>
+
+<!-- descripcion -->
+<section id="features" class="container services">
+<div class="row">
+    <div class="col-sm-3">
+        <h2>Full responsive</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+    </div>
+    <div class="col-sm-3">
+        <h2>LESS/SASS Files</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+    </div>
+    <div class="col-sm-3">
+        <h2>6 Charts Library</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+    </div>
+    <div class="col-sm-3">
+        <h2>Advanced Forms</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+    </div>
+</div>
+</section>
+
+<!-- equipo -->
+<section id="team" class="gray-section team">
+<div class="container">
+    <div class="row m-b-lg">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Mi equipo</h1>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-lg-12">
-            <div class="text-center m-t-lg">
-                <h1>
-                    <%= @mainTitle %>
-                </h1>
-                <small>
-                    <%= @mainDesc %>
-                </small>
+        <div class="col-sm-4 wow fadeInLeft">
+            <div class="team-member">
+                <img src="" class="img-fluid rounded-circle img-small" alt="">
+                <h4>JUAN OSPINO ACUÑA</h4>
+                <p>Obtuvo la maxima votacion del partido de la U en el pasado debate(8.660 votos) apoya en forma irrestricta nuestra asamblea. <strong>Vamos pa lante.</strong> </p>
+                <ul class="list-inline social-icon">
+                    <li class="list-inline-item"><a href="https://twitter.com/juancoa23"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/juan.ospinoacuna"><i class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4 wow fadeInRight">
+            <div class="team-member">
+                <img src="" class="img-fluid rounded-circle img-small" alt="">
+                <h4>NINI YOHANA CANTILLO ESTRADA</h4>
+                <p>Gracias señor por estar abriendo el camino de la gloria y de la victoria en empoderar a una mujer para que dirija los destinos de nuestro municipio.</p>
+                <ul class="list-inline social-icon">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/nini.y.estrada"><i class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="team-member wow zoomIn">
+                <img src="" class="img-fluid rounded-circle" alt="">
+                <h4>JOSE CADENA BONFANTI</h4>
+                <p>Presidente del Concejo de Bquilla, exconcejal y expresidente de la corporacion edilicia de Bquilla</p>
+                <ul class="list-inline social-icon">
+                    <li class="list-inline-item"><a href="https://twitter.com/josecadenabon?lang=es"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/JoseCadenaBon/"><i class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-12 text-center m-t-lg m-b-lg">
+            <p>Gracias a todos por su colaboracion!</p>
+        </div>
+    </div>
 </div>
+</section>
+
+<!-- comentarios -->
+<section id="comments" class="comments features" style="margin-top: 0">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Que dicen de mi?</h1>
+            <p><strong>El diputado de la provincia.</strong></p>
+        </div>
+    </div>
+    <div class="row features-block">
+        <div class="col-lg-4">
+            <div class="bubble">
+                "Vamos por la máxima votación de la mano de Dios y el pueblo. <strong>Siempre aquí, siempre con la gente más necesitada y siempre trabajando por la provincia.</strong>"
+            </div>
+            <div class="comments-avatar">
+                <div class="media-body">
+                    <div class="commens-name">
+                        Jorge David Blaschke Vizcaino
+                    </div>
+                    <small class="text-muted">Seguidor</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="bubble">
+                "Juancho Manota, seguirá firme en la Asamblea del departamento. <strong>Juancho Manota, el diputado de la provincia.</strong>"
+            </div>
+            <div class="comments-avatar">
+                <div class="media-body">
+                    <div class="commens-name">
+                        Pepe noticias
+                    </div>
+                    <small class="text-muted">Prensa</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="bubble">
+                "Gran ser humano, amigo y servidor público éxitos un gran augurio en la próxima contienda electoral <strong>de la mano de Dios todo es posible nuestro diputado.</strong>"
+            </div>
+            <div class="comments-avatar">
+                <div class="media-body">
+                    <div class="commens-name">
+                        Emiroscar Cera Julio
+                    </div>
+                    <small class="text-muted">Seguidora</small>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+</section>
+
+<!-- contactos -->
+<section id="contact" class="gray-section contact">
+<div class="container">
+    <div class="row m-b-lg">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Contactame</h1>
+            <p>El Atlántico Avanza con Juancho Manotas</p>
+        </div>
+    </div>
+    <div class="row m-b-lg justify-content-center">
+        <div class="col-lg-3 ">
+            <address>
+                <strong><span class="navy">Juan Manotas Roa</span></strong><br/>
+                El diputado de la provincia<br/>
+                Atlantico<br/>
+            </address>
+        </div>
+        <div class="col-lg-4">
+            <p class="text-color">
+              Esta es la mejor forma de hacer politica ahora, al lado de la gente, con la gente y para la gente. Lo que dice la gente es lo que quiere la gente <strong>ESTOY CON ELLA</strong>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <a href="mailto:test@email.com" class="btn btn-primary">Enviar email</a>
+            <p class="m-t-sm">
+                O sigueme en mis redes sociales
+            </p>
+            <ul class="list-inline social-icon">
+                <li class="list-inline-item"><a href="https://twitter.com/juanchomanotas"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/JuanchoManotasR"><i class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center m-t-lg m-b-lg">
+            <p><strong>&copy; 2019 Company Name</strong>
+        </div>
+    </div>
+</div>
+</section>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('body').addClass('landing-page');
+    $('body').attr('id', 'page-top');
+
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 80
+    });
+
+    // Page scrolling feature
+    $('a.page-scroll').bind('click', function(event) {
+        var link = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(link.attr('href')).offset().top - 50
+        }, 500);
+        event.preventDefault();
+        $("#navbar").collapse('hide');
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+
+    // Activate WOW.js plugin for animation on scrol
+    new WOW().init();
+
+
+});
+
+</script>
+
+<% end %>
