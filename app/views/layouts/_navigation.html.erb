@@ -12,17 +12,12 @@
                     </ul>
                 </div>
                 <div class="logo-element">
-                    IN+
+                    J.M
                 </div>
             </li>
-            <li class="<%= 'active' if current_page?('/') %>">
-                <%= link_to "/" do %>
-                <i class="fa fa-laptop"></i> <span class="nav-label">Main page</span>
-                <% end %>
-            </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
-                <%= link_to "/home/minor" do %>
-                <i class="fa fa-desktop"></i> <span class="nav-label">Minor page</span>
+            <li class="<%= 'active' if current_page?('/persona/new') %>">
+                <%= link_to "/persona/new" do %>
+                <i class="fa fa-user-plus"></i> <span class="nav-label">Ingresar votante</span>
                 <% end %>
             </li>
             <li class="<%= 'active' if current_page?('/persona') %>">
