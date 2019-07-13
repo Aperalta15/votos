@@ -4,11 +4,11 @@
             <li class="nav-header">
                 <div class="dropdown profile-element">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <span class="block m-t-xs font-bold">Example user</span>
-                        <span class="text-muted text-xs block">Example menu<b class="caret"></b></span>
+                        <span class="block m-t-xs font-bold"><strong>Lider:</strong> <%=current_user.nombre%></span>
+                        <span class="text-muted text-xs block"><%=current_user.cedula%><b class="caret"></b></span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><%= link_to "Logout", destroy_user_session_path, class: "dropdown-item", method: :delete %></li>
+                        <li><%= link_to "Salir", destroy_user_session_path, class: "dropdown-item", method: :delete %></li>
                     </ul>
                 </div>
                 <div class="logo-element">
