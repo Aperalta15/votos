@@ -1,1 +1,8 @@
-
+<%= simple_form_for @persona do |f| %>
+  <%= f.input :cedula %>
+  <%= f.input :nombre %>
+  <%= f.input :apellido %>
+  <%= f.input :direccion %>
+  <%= f.input :celular %>
+  <%= f.button :submit, class: "btn btn-success"%>
+<% end %>
