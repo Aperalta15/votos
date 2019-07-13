@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :persona
+  resources :personas, except: [:show, :destroy]
   devise_for :users
   root to: 'home#index'
 
