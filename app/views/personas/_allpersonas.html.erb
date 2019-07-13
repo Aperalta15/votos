@@ -8,18 +8,20 @@
       <th scope="col">Direccion</th>
       <th scope="col">Correo</th>
       <th scope="col">Celular</th>
+      <th scope="col">Editar</th>
     </tr>
   </thead>
   <tbody>
     <% @personas.each do |persona|%>
         <tr>
           <th scope="row"><%=persona.id%></th>
-          <td><%=link_to persona.cedula, persona_path(persona)%></td>
+          <td><%=persona.cedula%></td>
           <td><%=persona.nombre%></td>
           <td><%=persona.apellido%></td>
           <td><%=persona.direccion%></td>
           <td><%=persona.correo%></td>
           <td><%=persona.celular%></td>
+          <td><%=link_to edit_persona_path(persona) do %><center><i class="fa fa-edit fa-2x""></center></i><%end%></td>
         </tr>
     <%end%>
   </tbody>
