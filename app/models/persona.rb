@@ -5,4 +5,5 @@ class Persona < ApplicationRecord
   validates :nombre, presence: true
   validates :apellido, presence: true
   validates :direccion, presence: true
+  validates :cedula, uniqueness: true
 end

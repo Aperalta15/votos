@@ -20214,3 +20214,201 @@ Processing by PersonasController#index as HTML
 Completed 200 OK in 118ms (Views: 92.3ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/personas" for ::1 at 2019-07-13 21:20:08 -0500
+  [1m[35m (58.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PersonasController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering personas/index.html.erb within layouts/application
+  [1m[36mPersona Load (0.8ms)[0m  [1m[34mSELECT "personas".* FROM "personas" WHERE "personas"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/personas/_allpersonas.html.erb:15
+  Rendered personas/_allpersonas.html.erb (166.2ms)
+  Rendered personas/index.html.erb within layouts/application (230.1ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2739ms (Views: 2326.7ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/personas" for ::1 at 2019-07-13 21:20:15 -0500
+Processing by PersonasController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering personas/index.html.erb within layouts/application
+  [1m[36mPersona Load (0.6ms)[0m  [1m[34mSELECT "personas".* FROM "personas" WHERE "personas"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/personas/_allpersonas.html.erb:15
+  Rendered personas/_allpersonas.html.erb (5.3ms)
+  Rendered personas/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_topnavbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 131ms (Views: 123.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/personas/new" for ::1 at 2019-07-13 21:20:16 -0500
+Processing by PersonasController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering personas/new.html.erb within layouts/application
+  Rendered personas/_form.html.erb (456.7ms)
+  Rendered personas/new.html.erb within layouts/application (468.0ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 633ms (Views: 596.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/personas" for ::1 at 2019-07-13 21:21:00 -0500
+Processing by PersonasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JsMb55gQqSlBLHPnIIEnlsXIGb9ps+5ba3XSe3jxR7ks1yS8CA0O52LbNtFj24QLH4XzhsfnqXZ3yNP2/kI2+Q==", "persona"=>{"cedula"=>"1001821114", "nombre"=>"Jose ", "apellido"=>"Bonadiez", "direccion"=>"CRA 6", "correo"=>"antperaltin@mail.com", "celular"=>"212331444"}, "commit"=>"Create Persona"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/personas_controller.rb:20
+  [1m[36mPersona Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "personas" WHERE "personas"."cedula" = $1 LIMIT $2[0m  [["cedula", 1001821114], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:20
+  [1m[35m (59.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/personas_controller.rb:20
+  Rendering personas/new.html.erb within layouts/application
+  Rendered personas/_form.html.erb (27.4ms)
+  Rendered personas/new.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 216ms (Views: 144.6ms | ActiveRecord: 60.8ms)
+
+
+Started GET "/personas" for ::1 at 2019-07-13 21:21:13 -0500
+Processing by PersonasController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering personas/index.html.erb within layouts/application
+  [1m[36mPersona Load (0.5ms)[0m  [1m[34mSELECT "personas".* FROM "personas" WHERE "personas"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/personas/_allpersonas.html.erb:15
+  Rendered personas/_allpersonas.html.erb (3.8ms)
+  Rendered personas/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 92.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/personas/1/edit" for ::1 at 2019-07-13 21:21:18 -0500
+Processing by PersonasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPersona Load (0.4ms)[0m  [1m[34mSELECT  "personas".* FROM "personas" WHERE "personas"."user_id" = $1 AND "personas"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:40
+  Rendering personas/edit.html.erb within layouts/application
+  Rendered personas/_form.html.erb (11.7ms)
+  Rendered personas/edit.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 152ms (Views: 116.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/personas/1" for ::1 at 2019-07-13 21:21:22 -0500
+Processing by PersonasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nUD/nlEDidMurFUoNzoCKjwp+P5KaM6RUcY+P5Sa6FuXVMDFwR4uHQ1bEB50YKG35mQSx+Q8ibxNez+yEimZGw==", "persona"=>{"cedula"=>"1001821114", "nombre"=>"Antonio Jose", "apellido"=>"Peralta Bonadiez", "direccion"=>"Cra 6N # 101-26", "correo"=>"antperaltin@gmail.com", "celular"=>"3016332203"}, "commit"=>"Update Persona", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPersona Load (0.5ms)[0m  [1m[34mSELECT  "personas".* FROM "personas" WHERE "personas"."user_id" = $1 AND "personas"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/personas_controller.rb:30
+  [1m[36mPersona Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "personas" WHERE "personas"."cedula" = $1 AND "personas"."id" != $2 LIMIT $3[0m  [["cedula", 1001821114], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/personas_controller.rb:30
+Redirected to http://localhost:3000/personas
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/personas" for ::1 at 2019-07-13 21:21:22 -0500
+Processing by PersonasController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering personas/index.html.erb within layouts/application
+  [1m[36mPersona Load (1.6ms)[0m  [1m[34mSELECT "personas".* FROM "personas" WHERE "personas"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/personas/_allpersonas.html.erb:15
+  Rendered personas/_allpersonas.html.erb (6.9ms)
+  Rendered personas/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_topnavbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 97ms (Views: 87.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/personas/1/edit" for ::1 at 2019-07-13 21:21:25 -0500
+Processing by PersonasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPersona Load (0.5ms)[0m  [1m[34mSELECT  "personas".* FROM "personas" WHERE "personas"."user_id" = $1 AND "personas"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:40
+  Rendering personas/edit.html.erb within layouts/application
+  Rendered personas/_form.html.erb (14.8ms)
+  Rendered personas/edit.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 97ms (Views: 89.7ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/personas/1" for ::1 at 2019-07-13 21:27:21 -0500
+Processing by PersonasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AEZRfWpve476eexiKFj1n27llgCZ/g4Ouso6Pt5V5/AKUm4m+nLcQNmOqVRrAlYCtKh8OTeqSSOmdzuzWOaWsA==", "persona"=>{"cedula"=>"1140883008", "nombre"=>"Antonio Jose", "apellido"=>"Peralta Bonadiez", "direccion"=>"Cra 6N # 101-26", "correo"=>"antperaltin@gmail.com", "celular"=>"3016332203"}, "commit"=>"Update Persona", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPersona Load (0.7ms)[0m  [1m[34mSELECT  "personas".* FROM "personas" WHERE "personas"."user_id" = $1 AND "personas"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/personas_controller.rb:30
+  [1m[36mPersona Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "personas" WHERE "personas"."cedula" = $1 AND "personas"."id" != $2 LIMIT $3[0m  [["cedula", 1140883008], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/personas_controller.rb:30
+  Rendering personas/edit.html.erb within layouts/application
+  Rendered personas/_form.html.erb (13.9ms)
+  Rendered personas/edit.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 262ms (Views: 250.0ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/personas/1" for ::1 at 2019-07-13 21:27:29 -0500
+Processing by PersonasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYipztiAE6VVHDEcFkXiins4bSzm4TAgW8I2FCx0CnBDnJaVSJ20a3brdCpVH0EXoXWHFUi1dw1HfzeZqsd7MA==", "persona"=>{"cedula"=>"1001821114", "nombre"=>"Antonio Jose", "apellido"=>"Peralta Bonadiez", "direccion"=>"Cra 6N # 101-26", "correo"=>"antperaltin@gmail.com", "celular"=>"3016332203"}, "commit"=>"Update Persona", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPersona Load (0.5ms)[0m  [1m[34mSELECT  "personas".* FROM "personas" WHERE "personas"."user_id" = $1 AND "personas"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/personas_controller.rb:30
+  [1m[36mPersona Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "personas" WHERE "personas"."cedula" = $1 AND "personas"."id" != $2 LIMIT $3[0m  [["cedula", 1001821114], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personas_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/personas_controller.rb:30
+Redirected to http://localhost:3000/personas
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/personas" for ::1 at 2019-07-13 21:27:29 -0500
+Processing by PersonasController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering personas/index.html.erb within layouts/application
+  [1m[36mPersona Load (0.7ms)[0m  [1m[34mSELECT "personas".* FROM "personas" WHERE "personas"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/personas/_allpersonas.html.erb:15
+  Rendered personas/_allpersonas.html.erb (4.3ms)
+  Rendered personas/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 117ms (Views: 88.2ms | ActiveRecord: 3.6ms)
+
+
