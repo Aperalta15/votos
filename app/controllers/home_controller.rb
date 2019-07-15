@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-   def index
+  def index
      render layout: "empty"
   end
 
