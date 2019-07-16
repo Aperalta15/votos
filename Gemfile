@@ -7,7 +7,6 @@ gem 'bootstrap', '~> 4.1.0'
 gem 'font-awesome-rails', '4.7.0.4'
 
 # Use sqlite3 as the database for Active Record
-ruby "2.5.1"
 #gem 'sqlite3', '~> 1.3.6'
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
