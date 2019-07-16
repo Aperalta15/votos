@@ -16,8 +16,8 @@ gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'bundler', '~> 2.0.1'
 
+# gem 'mini_racer', platforms: :ruby
 gem 'devise'
 
 gem 'bundler', '~> 2.0.1'
@@ -63,10 +63,5 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'pg', '~> 0.18.4'
-  gem 'rails_12factor', '0.0.2'
-end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
