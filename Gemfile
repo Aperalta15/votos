@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.6.0"
+gem 'bundler', '~> 2.0.2'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -22,7 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 gem 'devise'
 
-gem 'bundler', '~> 2.0.2'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
