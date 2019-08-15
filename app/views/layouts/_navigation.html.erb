@@ -15,17 +15,25 @@
                     J.M
                 </div>
             </li>
-            <li class="<%= 'active' if current_page?('/personas/new') %>">
-                <%= link_to "/personas/new" do %>
-                <i class="fa fa-user-plus"></i> <span class="nav-label">Ingresar amigo</span>
-                <% end %>
-            </li>
-            <li class="<%= 'active' if current_page?('/personas') %>">
-                <%= link_to "/personas" do %>
-                <i class="fa fa-users"></i> <span class="nav-label">Amigos</span>
-                <% end %>
-            </li>
+            <!-- Condicional para administrador -->
+            <% if current_user.has_role? :admin%>
+                <li class="<%= 'active' if current_page?('/users') %>">
+                    <%= link_to "/users" do %>
+                    <i class="fa fa-user-plus"></i><span class="nav-label">Amigos Sercanos</span>
+                    <% end %>
+                </li>
+            <%else%>
+                <li class="<%= 'active' if current_page?('/personas/new') %>">
+                    <%= link_to "/personas/new" do %>
+                    <i class="fa fa-user-plus"></i><span class="nav-label">Ingresar amigo</span>
+                    <% end %>
+                </li>
+                <li class="<%= 'active' if current_page?('/personas') %>">
+                    <%= link_to "/personas" do %>
+                    <i class="fa fa-users"></i><span class="nav-label">Amigos</span>
+                    <% end %>
+                </li>
+            <% end%>
         </ul>
-
     </div>
 </nav>
