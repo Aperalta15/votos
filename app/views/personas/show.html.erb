@@ -1,2 +1,19 @@
-<h1>Persona#show</h1>
-<p>Find me in app/views/persona/show.html.erb</p>
+<div class="col-md-6">
+  <div class="ibox-title">
+    <h5>Amigo: <%= @persona.nombre %></h5>
+  </div>
+  <div class="ibox-title">
+      <h3 class="text"> CEDULA </h3>
+      <%= @persona.cedula %>
+      <h3 class="infor"> NOMBRE </h3>
+       <%= @persona.nombre %>
+      <h3 class="text">APELLIDO </h3>
+      <%= @persona.apellido %>
+      <h3 class="text">CELULAR </h3>
+      <%= @persona.celular %>
+      <h3 class="text">DIRECCION </h3>
+      <%= @persona.direccion %>
+      <h3 class="text">CORREO</h3>
+       <%= @persona.correo %>
+  </div>
+</div>

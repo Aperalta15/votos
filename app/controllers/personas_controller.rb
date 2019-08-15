@@ -1,8 +1,14 @@
 class PersonasController < ApplicationController
+  respond_to :html
   before_action :authenticate_user!
-  before_action :set_persona, only: [:edit, :update]
+  before_action :set_persona, only: [:edit, :show, :update]
+
   def index
-    @personas = current_user.persona
+    if current_user.has_role? :admin
+      redirect_to users_path
+    else
+      @personas = current_user.persona
+    end
   end
 
   def edit
@@ -19,7 +25,7 @@ class PersonasController < ApplicationController
     @persona = current_user.persona.new(persona_params)
     if @persona.save
       flash[:success] = "Curso registrado correctamente"
-      redirect_to new_persona_path
+      respond_with @persona
     else
       flash[:alert] = "Problemas con la grabación"
       render :new
