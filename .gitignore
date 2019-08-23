@@ -18,3 +18,5 @@
 
 .byebug_history
 .DS_Store
+tmp/cache/bootsnap-compile-cache/3d/160ca99fe0856e
+*.log

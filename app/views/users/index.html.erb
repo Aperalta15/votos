@@ -11,13 +11,15 @@
         </tr>
       </thead>
       <tbody>
-        <% @users.each do |user|%>
+        <% @users.each_with_index do |user,index|%>
+          <%unless user.has_role? :admin%>
             <tr>
-              <th scope="row"><%= link_to user.id , user_path(user.id)%></th>
+              <th scope="row"><%= link_to index, user_path(user.id)%></th>
               <td scope="row"><%= link_to user.cedula , user_path(user.id)%></td>
               <td scope="row"><%= link_to  user.nombre , user_path(user.id)%></td>
               <td scope="row"><%= link_to  user.email , user_path(user.id)%></td>
             </tr>
+          <%end%>
         <%end%>
       </tbody>
     </table>
