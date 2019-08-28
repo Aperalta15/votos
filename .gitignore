@@ -20,3 +20,8 @@
 .DS_Store
 tmp/cache/bootsnap-compile-cache/3d/160ca99fe0856e
 *.log
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
