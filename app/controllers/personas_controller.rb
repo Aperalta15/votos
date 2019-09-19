@@ -24,7 +24,7 @@ class PersonasController < ApplicationController
   def create
     @persona = current_user.persona.new(persona_params)
     if @persona.save
-      flash[:success] = "Curso registrado correctamente"
+      flash[:success] = "Amigo registrado correctamente"
       respond_with @persona
     else
       flash[:alert] = "Problemas con la grabación"
