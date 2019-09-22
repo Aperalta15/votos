@@ -12,6 +12,10 @@ gem 'font-awesome-rails', '4.7.0.4'
 #gem 'sqlite3', '~> 1.3.6'
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
+
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'bootstrap-kaminari-views', '~> 0.0.5'
+
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sassc-rails'

@@ -1,6 +1,29 @@
 <div class="container">
   <h1>Amigos</h1>
-  <%= render 'allpersonas'%>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">CEDULA</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">APELLIDO</th>
+        <th scope="col">DIRECCION</th>
+        <th scope="col">CORREO</th>
+        <th scope="col">CELULAR</th>
+        <th scope="col">EDITAR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "allpersonas", collection: @personas, as: :persona %>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <%= paginate @personas, :theme => 'twitter-bootstrap-3', :pagination_class => "pagination-md pull-right" %>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
   <br>
   <br>
 </div>
