@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
 
     def show
-      @personas = @user.persona
+      @personas = @user.persona.order(id: :desc).page(params[:page])
     end
 
     private

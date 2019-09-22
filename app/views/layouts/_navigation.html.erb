@@ -19,7 +19,7 @@
             <% if current_user.has_role? :admin%>
                 <li class="<%= 'active' if current_page?('/users') %>">
                     <%= link_to "/users" do %>
-                    <i class="fa fa-user-plus"></i><span class="nav-label">Amigos Sercanos</span>
+                    <i class="fa fa-user-circle"></i><span class="nav-label">Amigos Cercanos</span>
                     <% end %>
                 </li>
             <%else%>

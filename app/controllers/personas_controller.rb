@@ -7,7 +7,7 @@ class PersonasController < ApplicationController
     if current_user.has_role? :admin
       redirect_to users_path
     else
-      @personas = current_user.persona
+      @personas = current_user.persona.order(id: :desc).page(params[:page])
     end
   end
 
