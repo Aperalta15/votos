@@ -8,6 +8,7 @@ class PersonasController < ApplicationController
       redirect_to users_path
     else
       @personas = current_user.persona.order(id: :desc).page(params[:page])
+      render json: @personas, status: :ok
     end
   end
 

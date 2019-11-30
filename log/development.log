@@ -25713,3 +25713,98 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 291ms (Views: 205.4ms | ActiveRecord: 5.9ms)
 
 
+Started GET "/personas/index" for ::1 at 2019-11-30 00:19:50 -0500
+Started GET "/peoples/index" for ::1 at 2019-11-30 00:19:57 -0500
+  [1m[35m (89.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (99.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PersonasController#show as HTML
+  Parameters: {"id"=>"index"}
+Processing by PeoplesController#index as HTML
+Completed 401 Unauthorized in 37ms (ActiveRecord: 0.0ms)
+
+
+  Rendering peoples/index.html.erb within layouts/application
+  [1m[36mUser Load (4540.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/peoples/index.html.erb:3
+  Rendered peoples/index.html.erb within layouts/application (9675.7ms)
+Completed 500 Internal Server Error in 42529ms (ActiveRecord: 9377.7ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( peoples.css )` to `config/initializers/assets.rb` and restart your server):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10:     <!-- Include style per-controller - vendor plugins -->
+    11:     <%= stylesheet_link_tag    params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css")%>
+    12:     <!-- Main css styles -->
+    13:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    14:     <!-- Main javascript files -->
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___332621074567202094_70354168877120'
+Started GET "/peoples/index" for ::1 at 2019-11-30 00:21:56 -0500
+Processing by PeoplesController#index as HTML
+  Rendering peoples/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/peoples/index.html.erb:3
+  Rendered peoples/index.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 2499ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( peoples.css )` to `config/initializers/assets.rb` and restart your server):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10:     <!-- Include style per-controller - vendor plugins -->
+    11:     <%= stylesheet_link_tag    params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css")%>
+    12:     <!-- Main css styles -->
+    13:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    14:     <!-- Main javascript files -->
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___332621074567202094_70354203783880'
+Started GET "/peoples/index" for ::1 at 2019-11-30 00:23:45 -0500
+  [1m[35m (100.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PeoplesController#index as HTML
+  Rendering peoples/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/peoples/index.html.erb:3
+  Rendered peoples/index.html.erb within layouts/application (179.3ms)
+  Rendered layouts/_navigation.html.erb (45.7ms)
+Completed 500 Internal Server Error in 15479ms (ActiveRecord: 10.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    4:             <li class="nav-header">
+    5:                 <div class="dropdown profile-element">
+    6:                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+    7:                         <span class="block m-t-xs font-bold"><strong>Lider:</strong> <%=current_user.nombre%></span>
+    8:                         <span class="text-muted text-xs block"><%=current_user.cedula%><b class="caret"></b></span>
+    9:                     </a>
+   10:                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
+  
+app/views/layouts/_navigation.html.erb:7:in `_app_views_layouts__navigation_html_erb__2135958038505720783_70322836891820'
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___560632004019685429_70322832537760'
+Started GET "/peoples/index" for ::1 at 2019-11-30 00:25:23 -0500
+Processing by PeoplesController#index as HTML
+  Rendering peoples/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/peoples/index.html.erb:3
+  Rendered peoples/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 9885ms (Views: 9836.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/peoples/index" for ::1 at 2019-11-30 00:27:41 -0500
+Processing by PeoplesController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/peoples_controller.rb:4
+Completed 200 OK in 338ms (Views: 139.9ms | ActiveRecord: 189.3ms)
+
+
